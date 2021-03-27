@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_welcome_label"
+            android:text="@string/welcome_title"
+            style="@style/TitleStyle"
+            tools:text="@string/welcome_title" />
+
+        <TextView
+            android:id="@+id/text_view_welcome_go_to_instructions"
+            android:text="@string/welcome_go_to_instructions"
+            style="@style/TextViewStyle"
+            tools:text="@string/welcome_go_to_instructions" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_instruction"
+            style="@style/ButtonStyle"
+            android:text="@string/welcome_instruction" />
+
+    </LinearLayout>
+
+</layout>
