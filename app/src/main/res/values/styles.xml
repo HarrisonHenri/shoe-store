@@ -20,8 +20,8 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:layout_marginBottom">16sp</item>
-        <item name="android:textSize">@dimen/text_size_button</item>
+        <item name="android:layout_marginBottom">@dimen/layout_margin_default</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
     </style>
 
     <style name="ButtonStyle" parent="@style/Widget.MaterialComponents.Button">
@@ -30,7 +30,7 @@
         <item name="android:layout_marginLeft">@dimen/layout_margin_default</item>
         <item name="android:letterSpacing">@dimen/letter_spacing_default</item>
         <item name="android:fontFamily">@font/roboto_bold</item>
-        <item name="android:textSize">@dimen/text_size_button</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
     </style>
 
     <style name="TextInputLayoutStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">

@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="layout_margin_xsmall">4dp</dimen>
-    <dimen name="layout_margin_small">8dp</dimen>
     <dimen name="layout_margin_default">16dp</dimen>
-    <dimen name="layout_margin_large">32dp</dimen>
-    <dimen name="layout_margin_xlarge">64dp</dimen>
 
-    <dimen name="text_size_default">19sp</dimen>
-    <dimen name="text_size_header">21sp</dimen>
-    <dimen name="text_size_button">14sp</dimen>
+    <dimen name="text_size_default">16sp</dimen>
+    <dimen name="text_size_header">32sp</dimen>
     <dimen name="letter_spacing_default">0.0</dimen>
 
 </resources>

@@ -31,7 +31,6 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tf_password"
             style="@style/TextInputLayoutStyle"
-            android:layout_marginBottom="@dimen/layout_margin_large"
             android:hint="@string/login_password_hint">
 
             <com.google.android.material.textfield.TextInputEditText
