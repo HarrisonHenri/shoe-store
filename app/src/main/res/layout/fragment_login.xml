@@ -3,6 +3,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="loginModel"
+            type="com.udacity.shoestore.screens.login.LoginViewModel" />
+    </data>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -17,14 +23,15 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_email"
             style="@style/TextInputLayoutStyle"
-            android:hint="@string/login_username_hint">
+            android:hint="@string/login_email_hint">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_text_email"
                 style="@style/TextInputStyle"
-                android:autofillHints="@string/login_username_hint"
+                android:autofillHints="@string/login_email_hint"
                 android:inputType="textEmailAddress"
-                tools:text="@string/login_username_hint" />
+                android:text="@={loginModel.user.email}"
+                tools:text="@string/login_email_hint" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -38,6 +45,7 @@
                 style="@style/TextInputStyle"
                 android:autofillHints="Type your password"
                 android:inputType="textPassword"
+                android:text="@={loginModel.user.password}"
                 tools:text="@string/login_password_hint" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -51,6 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
+                android:onClick="@{() -> loginModel.onCreateOrNextClick()}"
                 style="@style/ButtonStyle"
                 android:text="@string/login_next" />
 
@@ -60,6 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/next_button"
+                android:onClick="@{() -> loginModel.onCreateOrNextClick()}"
                 android:text="@string/login_create_account" />
 
         </RelativeLayout>

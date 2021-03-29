@@ -1,18 +1,24 @@
 package com.udacity.shoestore.screens.login
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.findNavController
+import androidx.lifecycle.Observer
 import com.udacity.shoestore.R
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 
+
     private lateinit var binding: FragmentLoginBinding
+    private lateinit var loginViewModel: LoginViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,18 +26,22 @@ class LoginFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
+        loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+
+        binding.setLifecycleOwner(this)
+
+        loginViewModel.navigateToWelcome.observe(viewLifecycleOwner, Observer { shouldGoToWelcome ->
+            if (shouldGoToWelcome) {
+                val action = LoginFragmentDirections.actionLoginFragmentToWelcomeScreen()
+                findNavController(this).navigate(action)
+            }
+            else {
+                Toast.makeText(context, "You are using the wrong credentials, please verify your data.", Toast.LENGTH_SHORT).show()
+            }
+        })
+
+        binding.loginModel = loginViewModel
+
         return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding.nextButton.setOnClickListener {
-            view.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeScreen())
-        }
-
-        binding.createAccountButton.setOnClickListener {
-            view.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeScreen())
-        }
     }
 }
