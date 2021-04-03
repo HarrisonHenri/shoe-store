@@ -24,7 +24,7 @@ class LoginViewModel : ViewModel() {
         _navigateToWelcome.value = isAuthenticated()
     }
 
-    fun onNagivationComplete () {
+    fun onNavigationComplete () {
         _navigateToWelcome.value = null
     }
 }

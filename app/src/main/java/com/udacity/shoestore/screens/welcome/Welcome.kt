@@ -31,7 +31,7 @@ class Welcome : Fragment() {
             shouldGoToInstructions?.let {
                 val action = WelcomeDirections.actionWelcomeToInstructions()
                 NavHostFragment.findNavController(this).navigate(action)
-                welcomeViewModel.onNagivationComplete()
+                welcomeViewModel.onNavigationComplete()
             }
         })
 

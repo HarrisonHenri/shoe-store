@@ -34,7 +34,7 @@ class Login : Fragment() {
                 if (shouldGoToWelcome) {
                     val action = LoginDirections.actionLoginToWelcome()
                     findNavController(this).navigate(action)
-                    loginViewModel.onNagivationComplete()
+                    loginViewModel.onNavigationComplete()
                 } else {
                     Toast.makeText(context, "You are using the wrong credentials, please verify your data.", Toast.LENGTH_SHORT).show()
                 }
