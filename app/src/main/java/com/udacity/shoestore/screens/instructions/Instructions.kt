@@ -29,7 +29,7 @@ class Instructions : Fragment() {
 
         instructionsViewModel.navigateToShoesList.observe(viewLifecycleOwner, Observer { shouldGoToInstructions ->
             shouldGoToInstructions?.let {
-                val action = InstructionsDirections.actionInstructionsToShoeList()
+                val action = InstructionsDirections.actionInstructionsToShoesList()
                 NavHostFragment.findNavController(this).navigate(action)
                 instructionsViewModel.onNavigationComplete()
             }
