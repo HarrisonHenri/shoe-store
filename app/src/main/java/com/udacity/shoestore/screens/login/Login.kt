@@ -1,7 +1,6 @@
 package com.udacity.shoestore.screens.login
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
-class LoginFragment : Fragment() {
+class Login : Fragment() {
 
 
     private lateinit var binding: FragmentLoginBinding
@@ -28,15 +27,17 @@ class LoginFragment : Fragment() {
 
         loginViewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
-        binding.setLifecycleOwner(this)
+        binding.lifecycleOwner = this
 
         loginViewModel.navigateToWelcome.observe(viewLifecycleOwner, Observer { shouldGoToWelcome ->
-            if (shouldGoToWelcome) {
-                val action = LoginFragmentDirections.actionLoginFragmentToWelcomeScreen()
-                findNavController(this).navigate(action)
-            }
-            else {
-                Toast.makeText(context, "You are using the wrong credentials, please verify your data.", Toast.LENGTH_SHORT).show()
+            if (shouldGoToWelcome != null) {
+                if (shouldGoToWelcome) {
+                    val action = LoginDirections.actionLoginToWelcome()
+                    findNavController(this).navigate(action)
+                    loginViewModel.onNagivationComplete()
+                } else {
+                    Toast.makeText(context, "You are using the wrong credentials, please verify your data.", Toast.LENGTH_SHORT).show()
+                }
             }
         })
 

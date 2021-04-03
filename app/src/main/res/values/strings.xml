@@ -7,5 +7,7 @@
 
     <string name="welcome_title">Welcome to Shoe Store!</string>
     <string name="welcome_go_to_instructions">Please review the instructions below before you start using the app!</string>
-    <string name="welcome_instruction">Go to instructions</string>
+    <string name="welcome_button_text">Go to instructions</string>
+
+    <string name="instructions_button_text">access our shoes options</string>
 </resources>

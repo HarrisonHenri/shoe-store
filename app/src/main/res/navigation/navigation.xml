@@ -2,20 +2,29 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/login">
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.udacity.shoestore.screens.login.LoginFragment"
+        android:id="@+id/login"
+        android:name="com.udacity.shoestore.screens.login.Login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_welcomeScreen"
-            app:destination="@id/welcomeScreen" />
+            android:id="@+id/action_login_to_welcome"
+            app:destination="@id/welcome" />
     </fragment>
     <fragment
-        android:id="@+id/welcomeScreen"
-        android:name="com.udacity.shoestore.screens.welcome.WelcomeScreen"
-        android:label="fragment_welcome_screen"
-        tools:layout="@layout/fragment_welcome" />
+        android:id="@+id/welcome"
+        android:name="com.udacity.shoestore.screens.welcome.Welcome"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcome_to_instructions"
+            app:destination="@id/instructions" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructions"
+        android:name="com.udacity.shoestore.screens.instructions.Instructions"
+        android:label="fragment_instructions"
+        tools:layout="@layout/fragment_instructions" />
 </navigation>
