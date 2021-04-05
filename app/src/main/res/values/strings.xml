@@ -9,7 +9,7 @@
     <string name="welcome_go_to_instructions">Please review the instructions below before you start using the app!</string>
     <string name="welcome_button_text">Go to instructions</string>
 
-    <string name="instructions_button_text">access our shoes options</string>
+    <string name="instructions_button_text">Access the shoes options!</string>
     <string name="instructions_save_text">To save a new shoe, provide the informations and click on Save.</string>
     <string name="instructions_cancel_text">To cancel, just click on Cancel.</string>
 
