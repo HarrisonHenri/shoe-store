@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin_default"
+        app:cardElevation="10dp"
+        android:background="@color/design_default_color_background"
+        card_view:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:tools="http://schemas.android.com/tools">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/text_view_shoe_name_container"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <TextView
+                    style="@style/ShoeNameStyle"
+                    android:id="@+id/text_view_shoe_name"
+                    tools:text="@string/shoe_name"
+                    android:hint="@string/shoe_name" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/label_company"
+                style="@style/TextItemStyle"
+                android:text="@string/company_name"
+                tools:text="@string/company_name"
+                android:layout_marginStart="@dimen/layout_margin_default"
+                app:layout_constraintStart_toEndOf="@+id/text_view_shoe_name_container"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/text_view_company"
+                style="@style/TextItemStyle"
+                android:hint="@string/company_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/label_company"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/label_shoe_size"
+                style="@style/TextItemStyle"
+                android:text="@string/shoe_size"
+                tools:text="@string/shoe_size"
+                android:layout_marginTop="@dimen/layout_margin_default"
+                app:layout_constraintStart_toStartOf="@+id/label_company"
+                app:layout_constraintTop_toBottomOf="@+id/label_company" />
+            <TextView
+                android:id="@+id/text_view_shoe_size"
+                style="@style/TextItemStyle"
+                android:hint="@string/shoe_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/layout_margin_default"
+                app:layout_constraintStart_toEndOf="@+id/label_shoe_size"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_company" />
+            <TextView
+                android:id="@+id/text_view_description"
+                style="@style/TextItemStyle"
+                android:hint="@string/description"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/layout_margin_default"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_shoe_size" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

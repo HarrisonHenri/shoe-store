@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
@@ -10,7 +11,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/layout_margin_default"
         android:orientation="vertical">
 
         <ImageView
@@ -19,7 +19,24 @@
             android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/layout_margin_default"
             android:src="@drawable/shoe"
+            android:id="@+id/shoe_icon"
         />
+
+        <TextView
+            android:id="@+id/instructions_cancel_text_view"
+            android:text="@string/instructions_cancel_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/layout_margin_default"
+            tools:text="@string/instructions_cancel_text" />
+
+        <TextView
+            android:id="@+id/instructions_save_text_view"
+            android:text="@string/instructions_save_text"
+            android:layout_margin="@dimen/layout_margin_default"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            tools:text="@string/instructions_save_text" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_shoe_list"

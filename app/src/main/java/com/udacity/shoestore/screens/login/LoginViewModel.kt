@@ -7,15 +7,16 @@ import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.User
 
 class LoginViewModel : ViewModel() {
+    private val _user = MutableLiveData<User>()
+    val user: LiveData<User>
+        get() = _user
 
-    val user = MutableLiveData<User>()
-    
     private val _navigateToWelcome = MutableLiveData<Boolean>()
     val navigateToWelcome: LiveData<Boolean>
         get() = _navigateToWelcome
 
     init {
-        user.value = User(email = "", password = "")
+        _user.value = User(email = "", password = "")
     }
 
     fun isAuthenticated (): Boolean =  user.value?.email == "harrison@gmail.com" &&  user.value?.password == "123456"

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="shoeDetailsModel"
+            type="com.udacity.shoestore.screens.shoedetails.ShoeDetailsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="@dimen/layout_margin_default"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_shoe_name"
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/shoe_name_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_shoe_name"
+                style="@style/TextInputStyle"
+                android:text="@={shoeDetailsModel.name}"
+                android:autofillHints="@string/shoe_name_hint"
+                android:inputType="textCapWords"
+                tools:text="@string/shoe_name_hint" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_company"
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/company_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_company"
+                style="@style/TextInputStyle"
+                android:text="@={shoeDetailsModel.company}"
+                android:autofillHints="@string/shoe_name_hint"
+                android:inputType="textCapWords"
+                tools:text="@string/company_hint" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_shoe_size"
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/shoe_size_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_shoe_size"
+                style="@style/TextInputStyle"
+                android:text="@={shoeDetailsModel.size}"
+                android:autofillHints="@string/shoe_size_hint"
+                android:inputType="numberDecimal"
+                tools:text="@string/shoe_size_hint" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_description"
+            style="@style/TextInputLayoutStyle"
+            android:hint="@string/description_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_description"
+                style="@style/TextInputStyle"
+                android:text="@={shoeDetailsModel.description}"
+                android:autofillHints="@string/description_hint"
+                android:inputType="textCapWords"
+                tools:text="@string/description_hint" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_button"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/save_button"
+                android:onClick="@{() -> shoeDetailsModel.onCancelClick()}"
+                android:text="@string/shoe_cancel"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_button"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:onClick="@{() -> shoeDetailsModel.onSaveClick()}"
+                android:text="@string/shoe_save"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

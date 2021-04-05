@@ -17,7 +17,6 @@ class Welcome : Fragment() {
     private lateinit var welcomeViewModel: WelcomeViewModel
     private lateinit var binding: FragmentWelcomeBinding
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 

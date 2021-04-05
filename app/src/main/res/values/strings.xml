@@ -10,7 +10,21 @@
     <string name="welcome_button_text">Go to instructions</string>
 
     <string name="instructions_button_text">access our shoes options</string>
+    <string name="instructions_save_text">To save a new shoe, provide the informations and click on Save.</string>
+    <string name="instructions_cancel_text">To cancel, just click on Cancel.</string>
 
     <string name="shoe_list_add_a_new_shoe">Add a new shoe</string>
     <string name="logout_menu_item">Logout</string>
+
+    <string name="shoe_name_hint">Shoe Name</string>
+    <string name="company_hint">Company</string>
+    <string name="shoe_size_hint">Shoe Size</string>
+    <string name="description_hint">Description</string>
+    <string name="shoe_save">Save</string>
+    <string name="shoe_cancel">Cancel</string>
+
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company_name">Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="description">Description</string>
 </resources>

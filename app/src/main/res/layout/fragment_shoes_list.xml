@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="shoesListModel"
+            type="com.udacity.shoestore.screens.shoeslist.ShoesListViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:padding="@dimen/layout_margin_default"
         android:layout_height="match_parent">
-
 
         <ScrollView
             android:id="@+id/shoes_scroll_view"
@@ -15,10 +21,10 @@
             app:layout_constraintBottom_toTopOf="@+id/shoe_list_add_shoe"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent">
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
-                android:id="@+id/shoes_list"
+                android:id="@+id/shoe_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
@@ -32,6 +38,7 @@
             android:src="@drawable/ic_add"
             android:layout_margin="@dimen/layout_margin_default"
             android:contentDescription="@string/shoe_list_add_a_new_shoe"
+            android:onClick="@{() -> shoesListModel.onGoToShoeDetailsClick()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
