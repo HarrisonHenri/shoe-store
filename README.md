@@ -1,78 +1,67 @@
 # The Shoe Store
 
-This project will consist of five screens. You don't have to create a shoe store, you can use any other item as long as you create the following screens. You will be creating:
+## About this Project
 
-1. Login screen: Email and password fields and labels plus create and login buttons
-2. Welcome onboarding screen
-3. Instructions onboarding screen
-4. Shoe Listing screen
-5. Shoe Detail screen for adding a new shoe
+The idea of the App is:
 
-## Getting Started
+_"Allow the user to create a shoe store inventory as Android Kotlin Developer first assignment"._
 
-Open the starter project in the latest stable version of Android Studio.
+## Why?
 
-Open the starter project in Android Studio
+This project is part of my personal portfolio, so, I'll be happy if you could provide me any feedback about the project, code, structure or anything that you can report that could make me a better developer!
 
-##Steps
+Email-me: harrisonhenrisn@gmail.com
 
-1. Open the starter project in Android Studio
+Connect with me at [LinkedIn](https://linkedin.com/in/harrison-henri-dos-santos-nascimento-a6ba33112).
 
-2. Add the navigation libraries to the app build.gradle file
+Also, you can use this Project as you wish, be for study, be for make improvements or earn money with it!
 
-3. Add the safe-arg plugin to the main and app build.gradle file
+It's free!
 
-4. Create a new navigation xml file
+## Functionalities
 
-5. Create a new Login destination.
+- Login with credentials (e.g: E-mail: harrison@gmail.com; password: 123456)
 
-   * Include email and password labels 
+![](assets/login.png)
 
-   - Include email and password fields
-   - Create buttons for creating a new login and logging in with an existing account
-   - Clicking either button should navigate to the Welcome Screen.
+- Welcome page 
 
-6. Create a new Welcome screen destination that includes:
+![](assets/welcome.png)
 
-   * A new layout
-   * At least 2 textviews
-   * A navigation button with actions to navigate to the instructions screen
+- Instructions page 
 
-7. Create a new Instruction destination that includes:
+![](assets/instructions.png)
 
-   * A new layout
-   * At least 2 textviews
-   * A navigation button with actions to navigate to the shoe list screen
+- Shoe Details page 
 
-8. Create a class that extends ViewModel
+![](assets/detail.png)
 
-   *  Use a LiveData field that returns the list of shoes
+- Shoes List page 
 
-9. Create a new Shoe List destination that includes:
+![](assets/list.png)
 
-   * A new layout
-   * A ScrollView
-   * A LinearLayout for Shoe Items
-   * A FloatingActionButton with an action to navigate to the shoe detail screen
+## Install
 
-10. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
+Clone the repo and open with [Android Studio](https://developer.android.com/studio?hl=pt&gclid=CjwKCAjwx6WDBhBQEiwA_dP8rfJ1IFHK0ldtDTs7g4jWKDGx9_sbmGEEMrQ00hjZa5X4RCTPMFRS0RoCSj0QAvD_BwE&gclsrc=aw.ds)
 
-11. Create a new Shoe Detail destination that includes:
+```
+$ git clone https://https://github.com/HarrisonHenri/shoe-store
+```
 
-    * A new layout
-    * A TextView label and EditView for the
-      * Shoe Name
-      * Company
-      * Shoe Size
-      * Description
-    * A Cancel button with an action to navigate back to the shoe list screen
-    * A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
+## Built With
 
-12. Make sure you can’t go back to onboarding screens
+* [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
+* [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
+* [Data Binding](https://developer.android.com/topic/libraries/data-binding/) with binding adapters
+* [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/) with the SafeArgs plugin for parameter passing between fragments
+* [Material](https://material.io/develop/android/docs/getting-started) 
 
-13. In the Shoe List screen:
+## Contributing
 
-    * Use an Activity level ViewModel to hold a list of Shoes (use by activityViewModels)
-    * Observe the shoes variable from the ViewModel
-    * Use DataBindingUtil to inflate the shoe_list layout
-    * Add a new layout item into the scrollview for each shoe.
+You can send how many PR's do you want, I'll be glad to analyse and accept them! And if you have any question about the project...
+
+Email-me: harrisonhenrisn@gmail.com
+
+Connect with me at [LinkedIn](https://linkedin.com/in/harrison-henri-dos-santos-nascimento-a6ba33112).
+
+Thank you!
